@@ -1,8 +1,14 @@
+import { Routes, Route } from "react-router-dom";
+import React from "react";
+const Home = React.lazy(() => import("./components/home"));
+
 const App = () => {
   return (
     <>
       <div>
-        <h1 className="text-red-500">Wellocm To Page</h1>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </div>
     </>
   );

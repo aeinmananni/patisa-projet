@@ -2,3 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+body{
+      height: 100vh;
+      overflow: hidden;
+}
+.parentProductsCategorization{
+     @apply flex cursor-pointer gap-2 items-center hover:bg-colorPrimary transition-all duration-300 rounded-md  px-1
+}
+
+.iconFlash{
+    @apply text-colorPrimary2 group-hover:text-white duration-300 group-hover:rotate-90
+}
