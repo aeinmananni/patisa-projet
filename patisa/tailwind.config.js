@@ -18,7 +18,8 @@ export default {
           colorDark:'#081C38' ,
           cartColorWoman : '#CC655D',
           buttonDivBackgroundSlider:"#FFFFFFCC",
-          servervicesColorText:"#32323D"
+          servervicesColorText:"#32323D",
+          customColorGradient:"#B7C9E1"
         }
         
     },
