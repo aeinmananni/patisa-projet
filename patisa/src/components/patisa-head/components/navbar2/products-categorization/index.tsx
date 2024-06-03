@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import productSvg from "../../icon/product-icon.svg";
 import { SlArrowDown } from "react-icons/sl";
 import DropDown from "./drop-down";
@@ -16,6 +16,7 @@ import ShortsMenIcon from "../icons/shorts-men-icon";
 import TshirtMenIcon from "../icons/t-shirt-men-icon";
 import PantsMenIcon from "../icons/pants-men-icon";
 import UnderWearIcon from "../icons/under-wear";
+import { useClickAway } from "react-use";
 
 const womenscategories: CategoryModalType[] = [
   { id: 1, title: "دسته بندی  های زنانه", icon: <WomanCategoryIcon /> },
@@ -37,6 +38,11 @@ const menCategories: CategoryModalType[] = [
 
 const ProductsCategorization = () => {
   const [focus, setFocus] = useState<boolean>(false);
+  const ref = useRef<HTMLDivElement>(null);
+  useClickAway(ref, () => {
+    setFocus(false);
+  });
+
   return (
     <>
       <div className="relative">
@@ -59,13 +65,16 @@ const ProductsCategorization = () => {
             </span>
           </div>
           <SlArrowDown
-            className={`text-colorPrimary2 group-hover:text-white duration-300 group-hover:rotate-90 ${
+            className={`text-colorPrimary2 group-hover:text-white duration-300 group-hover:rotate-90  ${
               focus ? "text-white rotate-90" : ""
             }`}
           />
         </div>
         {focus && (
-          <div className="flex flex-col justify-start items-start absolute py-5 right-7">
+          <div
+            ref={ref}
+            className="flex flex-col justify-start items-start absolute py-5 right-7 z-20 bg-white"
+          >
             <DropDown
               gendercategories={womenscategories}
               isRounded

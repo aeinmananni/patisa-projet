@@ -9,7 +9,7 @@ type Props = {
 const DropDown = ({ gendercategories, isRounded, styles }: Props) => {
   return (
     <>
-      <div className="   w-max">
+      <div className="w-max">
         {gendercategories.map((woman, index) => (
           <div
             key={index}

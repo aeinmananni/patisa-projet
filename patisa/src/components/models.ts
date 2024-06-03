@@ -11,3 +11,11 @@ export type CategoryModalType = {
      title:string,
      icon:React.ReactNode
 }
+
+export type ServicesPatisaType = {
+     id:number
+     image:string
+     title:string
+     description:string
+     width?:number
+}

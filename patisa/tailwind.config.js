@@ -1,4 +1,6 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -12,12 +14,17 @@ export default {
           colorPrimary:'#16519F',
           colorPrimary2:'#334966',
           blueLigth:"#E8EEF5",
-          orangeCustom : "#FF7E74",
-          colorDark:'#081C38'
+          orangeCustom : "#FF7E74", 
+          colorDark:'#081C38' ,
+          cartColorWoman : '#CC655D',
+          buttonDivBackgroundSlider:"#FFFFFFCC",
+          servervicesColorText:"#32323D"
         }
         
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui')
+  ],
 }
 

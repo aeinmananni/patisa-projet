@@ -13,7 +13,7 @@ const Navbar1 = () => {
     { id: 1, path: "/contact-us", linkName: "ارتباط با ما" },
   ];
   return (
-    <div className="flex justify-between gap-16 items-center px-4">
+    <div className="flex justify-between gap-16 items-center px-6">
       <img src={patisaIcon} alt="" />
       <div className="flex justify-center items-center gap-10 text-sm">
         {LinkArray.map((list, index) => (
