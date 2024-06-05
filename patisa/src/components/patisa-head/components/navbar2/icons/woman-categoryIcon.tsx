@@ -1,9 +1,13 @@
-const WomanCategoryIcon = () => {
+type Props = {
+  width?: string;
+  height?: string;
+};
+const WomanCategoryIcon = ({ width, height }: Props) => {
   return (
     <>
       <svg
-        width="12"
-        height="24"
+        width={width}
+        height={height}
         viewBox="0 0 12 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

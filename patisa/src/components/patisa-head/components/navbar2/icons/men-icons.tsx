@@ -1,9 +1,14 @@
-const MenIcons = () => {
+type Props = {
+  width?: string;
+  height?: string;
+};
+
+const MenIcons = ({ width, height }: Props) => {
   return (
     <div className="fill-colorDark  ">
       <svg
-        width="10"
-        height="23"
+        width={width}
+        height={height}
         viewBox="0 0 10 23"
         xmlns="http://www.w3.org/2000/svg"
       >

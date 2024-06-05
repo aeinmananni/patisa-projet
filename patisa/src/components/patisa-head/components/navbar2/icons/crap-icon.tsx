@@ -1,9 +1,14 @@
-const CropIcon = () => {
+type Props = {
+  width?: string;
+  height?: string;
+};
+
+const CropIcon = ({ width, height }: Props) => {
   return (
     <div className="fill-colorDark  group-hover:fill-colorPrimary duration-500">
       <svg
-        width="16"
-        height="18"
+        width={width}
+        height={height}
         viewBox="0 0 16 18"
         xmlns="http://www.w3.org/2000/svg"
       >

@@ -11,7 +11,7 @@ export default {
 
           redLigth:"#FF7E74",
           garyCustom : '#7E7E96',
-          colorPrimary:'#16519F',
+          colorPrimary:'#16519F',  
           colorPrimary2:'#334966',
           blueLigth:"#E8EEF5",
           orangeCustom : "#FF7E74", 
@@ -19,7 +19,12 @@ export default {
           cartColorWoman : '#CC655D',
           buttonDivBackgroundSlider:"#FFFFFFCC",
           servervicesColorText:"#32323D",
-          customColorGradient:"#B7C9E1"
+          customColorGradient:"#B7C9E1",
+          brownCustom:"#733934",
+          DressColor1: "#D62121",
+          DeressColor2 :"#B3AD84",
+          DeressColor3:'#B79B89',
+          DeressColor4:"#16519F"
         }
         
     },

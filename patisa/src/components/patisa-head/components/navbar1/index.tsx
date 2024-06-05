@@ -15,13 +15,13 @@ const Navbar1 = () => {
   return (
     <div className="flex justify-between gap-16 items-center px-6">
       <img src={patisaIcon} alt="" />
-      <div className="flex justify-center items-center gap-10 text-sm">
+      <div className="flex justify-center items-center gap-10 text-sm ">
         {LinkArray.map((list, index) => (
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "text-colorPrimary border-b-2 border-orangeCustom p-3  "
-                : ""
+                ? "text-colorPrimary border-b-2 border-orangeCustom p-3 duration-500"
+                : "hover:text-orangeCustom duration-500"
             }
             key={index}
             to={list.path}

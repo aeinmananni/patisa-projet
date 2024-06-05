@@ -19,3 +19,13 @@ export type ServicesPatisaType = {
      description:string
      width?:number
 }
+
+export type LatestProductsCartType = {
+     id:number,
+     imageAddres :string
+     dressTitle:string
+     code:string
+     price:string
+     sizes:string[]
+     colors:string[]
+}

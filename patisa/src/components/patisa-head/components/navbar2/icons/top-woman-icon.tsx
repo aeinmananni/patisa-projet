@@ -1,10 +1,15 @@
-const TopWoman = () => {
+type Props = {
+  width?: string;
+  height?: string;
+};
+
+const TopWoman = ({ width, height }: Props) => {
   return (
     <>
       <div className="fill-colorDark group-hover:fill-colorPrimary duration-500">
         <svg
-          width="12"
-          height="18"
+          width={width}
+          height={height}
           viewBox="0 0 12 18"
           xmlns="http://www.w3.org/2000/svg"
         >

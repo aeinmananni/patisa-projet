@@ -1,10 +1,15 @@
-const TShirtIcon = () => {
+type Props = {
+  width?: string;
+  height?: string;
+};
+
+const TShirtIcon = ({ width, height }: Props) => {
   return (
     <>
       <div className="fill-colorDark  group-hover:fill-colorPrimary duration-500">
         <svg
-          width="18"
-          height="20"
+          width={width}
+          height={height}
           viewBox="0 0 18 20"
           xmlns="http://www.w3.org/2000/svg"
         >
