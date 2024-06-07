@@ -26,6 +26,7 @@ export default {
           DeressColor2 :"#B3AD84",
           DeressColor3:'#B79B89',
           DeressColor4:"#16519F",
+          redLight:"#FFF2F1"
        
         }
         

@@ -119,7 +119,7 @@ const BestSellingProducts = () => {
   return (
     <>
       <div className="h-80 py-14 w-full bg-orangeCustom mt-44 rounded-lg px-16 ">
-        <div className="flex flex-col gap-12  h-[200%]  w-max">
+        <div className="flex flex-col gap-12  h-[200%]  w-max px-6">
           <DeclaerTitleAndIconCompo
             title="پر فروش ترین محصولات"
             icon={bestSelingIcon}

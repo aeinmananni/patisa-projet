@@ -4,6 +4,7 @@ import PatisaServices from "../patisa-services";
 import CategoryBox from "../category-box";
 import LatestProducts from "../latest-products";
 import BestSellingProducts from "../Best-selling-products";
+import GenderSets from "../gender-set";
 const Home = () => {
   return (
     <>
@@ -12,9 +13,11 @@ const Home = () => {
         <SliderImageComponent />
         <PatisaServices />
         <CategoryBox />
+
         <div className="grid grid-cols-1 gap-16 w-full">
           <LatestProducts />
           <BestSellingProducts />
+          <GenderSets />
         </div>
       </div>
     </>

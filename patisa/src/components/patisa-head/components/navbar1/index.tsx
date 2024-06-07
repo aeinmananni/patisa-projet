@@ -32,7 +32,9 @@ const Navbar1 = () => {
       </div>
       <div className="flex items-center gap-2">
         <div className="flex flex-col">
-          <span className="text-colorPrimary">011 322 4578</span>
+          <span className="text-colorPrimary flex flex-wrap-reverse">
+            78 45 322 011
+          </span>
           <span className="text-garyCustom text-sm">تماس با پشتیبانی</span>
         </div>
         <img src={saportIcon} alt="" />
