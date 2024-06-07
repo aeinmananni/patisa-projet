@@ -6,7 +6,7 @@ import LatestProducts from "../latest-products";
 const Home = () => {
   return (
     <>
-      <div className="h-screen overflow-y-auto flex flex-col gap-9 pb-64">
+      <div className="h-screen overflow-y-auto flex flex-col gap-9 pb-64 px-12">
         <PatisaHead />
         <SliderImageComponent />
         <PatisaServices />

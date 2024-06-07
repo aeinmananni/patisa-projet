@@ -46,7 +46,7 @@ const LatestProducts = () => {
   ];
   return (
     <>
-      <div className="px-16">
+      <div className="">
         <div className="w-full bg-blueLigth  h-80 flex flex-col px-20 py-20 rounded-xl">
           <div className="flex flex-col gap-8 px-3">
             <div className="flex justify-between  items-start">

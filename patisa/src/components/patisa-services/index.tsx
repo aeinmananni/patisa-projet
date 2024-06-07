@@ -47,7 +47,7 @@ const PatisaServices = () => {
   ];
   return (
     <>
-      <div className="flex flex-col px-3 gap-8">
+      <div className="flex flex-col  gap-8">
         <HeadPatisaServices />
         <MainPatisaServices services={ServicesPatisa} />
       </div>

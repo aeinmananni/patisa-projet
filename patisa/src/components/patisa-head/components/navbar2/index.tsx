@@ -6,7 +6,7 @@ import SerachIcon from "./icons/search-icon";
 const Navbar2 = () => {
   return (
     <>
-      <div className="flex justify-between items-center px-4 w-full ">
+      <div className="flex justify-between items-center  w-full ">
         <div className="flex  justify-center items-center gap-16  w-max ">
           <ProductsCategorization />
           <div className="relative">
