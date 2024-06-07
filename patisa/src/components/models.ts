@@ -29,3 +29,12 @@ export type LatestProductsCartType = {
      sizes:string[]
      colors:string[]
 }
+
+export type BestCartInfoType = Pick<LatestProductsCartType , "id" | "dressTitle"|"price"|"code"|"imageAddres">
+
+export type BestSellingCartType = {
+      id:number,
+      title :string,
+      image:string,
+      CartInfo : BestCartInfoType[]
+}

@@ -25,7 +25,7 @@ const Slider = ({ CursorItems }: Props) => {
   };
   return (
     <>
-      <div className="relative w-full h-[84%] ">
+      <div className="relative w-full h-[92%] ">
         <div className="carousel h-full rounded-r-xl">
           {CursorItems.items.map((it, index) => (
             <img

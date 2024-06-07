@@ -11,7 +11,7 @@ const LatestProductCarts = ({ productsCartInfo }: Props) => {
   return (
     <>
       {productsCartInfo.map((items) => (
-        <div className="flex flex-col bg-white relative items-start h-full gap-3 shadow-lg w-max p-3 py-5 rounded-lg group">
+        <div className="flex flex-col bg-white relative items-start h-full gap-3 shadow-lg w-max p-3 py-5 rounded-lg group ">
           <Colors itemColors={items.colors} />
 
           <div className="relative overflow-hidden">

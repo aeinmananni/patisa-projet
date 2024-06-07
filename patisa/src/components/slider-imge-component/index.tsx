@@ -32,7 +32,7 @@ const SliderImageComponent = () => {
   ];
   return (
     <>
-      <div className="flex w-full justify-center gap-4  items-center">
+      <div className="flex w-full justify-center gap-4  items-center px-4">
         <Slider
           CursorItems={{
             items: ImageItesm,

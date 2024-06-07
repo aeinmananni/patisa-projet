@@ -16,6 +16,7 @@ export default {
           blueLigth:"#E8EEF5",
           orangeCustom : "#FF7E74", 
           colorDark:'#081C38' ,
+          colorDark2:"#113D77",
           cartColorWoman : '#CC655D',
           buttonDivBackgroundSlider:"#FFFFFFCC",
           servervicesColorText:"#32323D",
@@ -24,7 +25,8 @@ export default {
           DressColor1: "#D62121",
           DeressColor2 :"#B3AD84",
           DeressColor3:'#B79B89',
-          DeressColor4:"#16519F"
+          DeressColor4:"#16519F",
+       
         }
         
     },

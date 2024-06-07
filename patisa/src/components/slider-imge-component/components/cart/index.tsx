@@ -29,10 +29,10 @@ const Cart = ({
 }: Props) => {
   return (
     <div
-      className={`rounded-l-xl w-full h-max overflow-hidden ${styles?.parentDiv}`}
+      className={`rounded-l-xl w-full  overflow-hidden ${styles?.parentDiv}`}
     >
       <div
-        className={`flex justify-between  relative  ${styles?.childDivImageAndText}`}
+        className={`flex justify-between  relative h-full  ${styles?.childDivImageAndText}`}
       >
         <CartInfoText
           onClick={onClick}
