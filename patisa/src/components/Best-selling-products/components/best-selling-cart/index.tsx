@@ -14,7 +14,7 @@ const BestSellingCart = ({
 }: Props) => {
   return (
     <>
-      <div className="h-full w-max rounded-lg bg-white border  shadow-lg ">
+      <div className="h-full  w-max rounded-lg bg-white   shadow-lg ">
         <BestSellingHeaderCart
           imageHeadCart={imageHeadCart}
           titleHeaderCart={titleHeaderCart}

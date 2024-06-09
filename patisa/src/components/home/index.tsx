@@ -5,6 +5,10 @@ import CategoryBox from "../category-box";
 import LatestProducts from "../latest-products";
 import BestSellingProducts from "../Best-selling-products";
 import GenderSets from "../gender-set";
+import ContentLatestOfPatisa from "../content-latest-of-patisa";
+import PatisaFooter from "../patisa-footer";
+import flash from "./icons/flash.svg";
+
 const Home = () => {
   return (
     <>
@@ -14,10 +18,19 @@ const Home = () => {
         <PatisaServices />
         <CategoryBox />
 
-        <div className="grid grid-cols-1 gap-16 w-full">
+        <div className="grid grid-cols-1 gap-64 w-full h-max  ">
           <LatestProducts />
           <BestSellingProducts />
           <GenderSets />
+        </div>
+        <ContentLatestOfPatisa />
+        <div className="w-full h-max border items-center flex flex-col mt-32 gap-6">
+          <div className=" text-colorPrimary w-full flex justify-center text-sm">
+            <img src={flash} />
+            <span>بازگشت به بالا</span>
+          </div>
+
+          <PatisaFooter />
         </div>
       </div>
     </>

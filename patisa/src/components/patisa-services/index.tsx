@@ -1,11 +1,12 @@
 import { ServicesPatisaType } from "../models";
-import HeadPatisaServices from "./components/head-patisa-services";
+import HeadPatisaBorders from "./components/head-patisa-services";
 import MainPatisaServices from "./components/main-patisa-services";
 import priceIcon from "./components/icons/price-icon.svg";
 import qualityGuarantee from "./components/icons/quality-guarantee.svg";
 import fastPost from "./components/icons/fast-post-icon.svg";
 import OriginalityOfGoods from "./components/icons/originality-of-goods.svg";
 import afterPurchaseService from "./components/icons/after-Purchase-Service.svg";
+import TextHeadPatisa from "./components/head-patisa-services/text-head-patisa";
 
 const PatisaServices = () => {
   const ServicesPatisa: ServicesPatisaType[] = [
@@ -47,8 +48,10 @@ const PatisaServices = () => {
   ];
   return (
     <>
-      <div className="flex flex-col  gap-8">
-        <HeadPatisaServices />
+      <div className="flex flex-col  gap-12 ">
+        <HeadPatisaBorders>
+          <TextHeadPatisa titleOverBorder="خدمات" text="پاتیسا" />
+        </HeadPatisaBorders>
         <MainPatisaServices services={ServicesPatisa} />
       </div>
     </>

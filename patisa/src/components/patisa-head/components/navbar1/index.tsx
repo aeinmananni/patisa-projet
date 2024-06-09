@@ -1,22 +1,15 @@
 import { NavLink } from "react-router-dom";
 import patisaIcon from "../icon/patisa-icon.svg";
 import saportIcon from "../icon/saport-icon.svg";
-import { LinkArrayType } from "../../../models";
+import { useStorePatisaManager } from "../../../store/store-patisa";
 
 const Navbar1 = () => {
-  const LinkArray: LinkArrayType[] = [
-    { id: 1, path: "/", linkName: "فروشگاه" },
-    { id: 1, path: "/rack-orders", linkName: "پیگیری سفارشات" },
-    { id: 1, path: "/purchase-guide", linkName: "راهنمای خرید" },
-    { id: 1, path: "/weblog", linkName: "وبلاگ" },
-    { id: 1, path: "/rules", linkName: "قوانین" },
-    { id: 1, path: "/contact-us", linkName: "ارتباط با ما" },
-  ];
+  const { stateLinkArray } = useStorePatisaManager();
   return (
     <div className="flex justify-between gap-16 items-center ">
       <img src={patisaIcon} alt="" />
       <div className="flex justify-center items-center gap-10 text-sm ">
-        {LinkArray.map((list, index) => (
+        {stateLinkArray.map((list, index) => (
           <NavLink
             className={({ isActive }) =>
               isActive

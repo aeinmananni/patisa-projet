@@ -24,9 +24,10 @@ export default {
           brownCustom:"#733934",
           DressColor1: "#D62121",
           DeressColor2 :"#B3AD84",
-          DeressColor3:'#B79B89',
+          DeressColor3:'#B79B89', 
           DeressColor4:"#16519F",
-          redLight:"#FFF2F1"
+          redLight:"#FFF2F1",
+          grayCustom2:"#F0F0F2"
        
         }
         

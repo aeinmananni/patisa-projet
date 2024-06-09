@@ -11,7 +11,7 @@ const TypesOfSets = ({ repalce }: Props) => {
   return (
     <>
       <div
-        className={`w-full h-full flex justify-center items-center ${
+        className={`w-full h-max flex justify-center items-center py-2 rounded-lg ${
           repalce ? "bg-blueLigth" : "bg-red-50"
         }`}
       >

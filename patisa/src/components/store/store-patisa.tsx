@@ -14,12 +14,14 @@ import PantsMenIcon from "../patisa-head/components/navbar2/icons/pants-men-icon
 import ShortsMenIcon from "../patisa-head/components/navbar2/icons/shorts-men-icon";
 import TshirtMenIcon from "../patisa-head/components/navbar2/icons/t-shirt-men-icon";
 import UnderWearIcon from "../patisa-head/components/navbar2/icons/under-wear";
+import { LinkArrayType } from "../models";
 
 type PatisaStoreType = {
   stateCategoryesWomenDropDown: CategoryModalType[];
   stateCategoryMenDropDown: CategoryModalType[];
   stateCategoryesWomenBox: CategoryModalType[];
   stateCategoryMenBox: CategoryModalType[];
+  stateLinkArray: LinkArrayType[];
 };
 
 export const useStorePatisaManager = create<PatisaStoreType>()((set, get) => ({
@@ -81,5 +83,13 @@ export const useStorePatisaManager = create<PatisaStoreType>()((set, get) => ({
       title: "لباس زیر",
       icon: <UnderWearIcon width="36" height="38" />,
     },
+  ],
+  stateLinkArray: [
+    { id: 1, path: "/", linkName: "فروشگاه" },
+    { id: 2, path: "/rack-orders", linkName: "پیگیری سفارشات" },
+    { id: 3, path: "/purchase-guide", linkName: "راهنمای خرید" },
+    { id: 4, path: "/weblog", linkName: "وبلاگ" },
+    { id: 5, path: "/rules", linkName: "قوانین" },
+    { id: 6, path: "/contact-us", linkName: "ارتباط با ما" },
   ],
 }));

@@ -1,13 +1,27 @@
 import borderSvg from "../icons/border.svg";
-const TextHeadPatisa = () => {
+
+type Props = {
+  titleOverBorder: string;
+  text: string;
+};
+
+const TextHeadPatisa = ({ titleOverBorder, text }: Props) => {
+  const spiliter = titleOverBorder.split(" ");
+
   return (
     <>
-      <div className="absolute bg-white py-1 px-3 text-2xl flex gap-2">
+      <div className="absolute bg-white py-1  text-2xl flex gap-2 px-5">
         <div className="flex flex-col gap-2">
-          <span className="text-servervicesColorText">خدمات</span>
-          <img src={borderSvg} />
+          <div className="flex gap-2">
+            {spiliter.map((text, index) => (
+              <div className="flex flex-col gap-2">
+                <span className="text-servervicesColorText">{text}</span>
+                {index === 0 && <img src={borderSvg} />}
+              </div>
+            ))}
+          </div>
         </div>
-        <span className="text-colorPrimary">پاتیسا</span>
+        <span className="text-colorPrimary">{text}</span>
       </div>
     </>
   );

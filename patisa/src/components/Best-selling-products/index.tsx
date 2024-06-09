@@ -118,14 +118,14 @@ const BestSellingProducts = () => {
   ];
   return (
     <>
-      <div className="h-80 py-14 w-full bg-orangeCustom mt-44 rounded-lg px-16 ">
-        <div className="flex flex-col gap-12  h-[200%]  w-max px-6">
+      <div className="h-80 py-14 w-full bg-orangeCustom  rounded-lg px-16 ">
+        <div className="flex flex-col gap-12  h-[200%]   w-max px-6">
           <DeclaerTitleAndIconCompo
             title="پر فروش ترین محصولات"
             icon={bestSelingIcon}
             parentClassName="!justify-start"
           />
-          <div className="flex h-full justify-between gap-3">
+          <div className="flex h-full justify-between gap-4">
             <AnimatonBox
               title="Popular"
               imageAbsolutePosition="https://s3-alpha-sig.figma.com/img/e232/337d/d62f9a6761428eda908eaa9ca0ca71af?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aLhbINqhZnu8Dao~XLtf1kOen75BMXcsHVbhiRxlCB2mVGrZej-cgSSUJMszjO0MlceuMxeD7axQaknFE836JlZgluJEkjOUpx5LKtYW5FlkN3GoQlOTsQwhC~Hr6E-qIsnDyIAiSuzEE3FHKoyF3MlCMD~zp9yG8C30Beem5dLDA8t9Ku6oosKhAxauyNVietg-SZo0GQ0iBFNG2DTFJy2osAbZxJjkwhEUSlJ8Ye9xoPW4vfsyPAXQ5-T5xIs-hRq6Ny~UZfxqrvuOILIaml5JNB6ErJ5dD1gmqFuEVqTXkrDBQOzDsHWzDJadULY9kmnHRmqthI4GXeEpGohfcQ__"

@@ -38,3 +38,7 @@ export type BestSellingCartType = {
       image:string,
       CartInfo : BestCartInfoType[]
 }
+
+export type MantoType = Pick<BestSellingCartType,"id"|"title"|"image"> &{
+  date:string
+}
