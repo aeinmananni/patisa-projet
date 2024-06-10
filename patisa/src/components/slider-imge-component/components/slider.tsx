@@ -11,7 +11,7 @@ type Props = {
 };
 
 const Slider = ({ CursorItems }: Props) => {
-  let [number, setNumber] = useState<number[]>([1]);
+  let [number, setNumber] = useState<number[]>([0]);
 
   const handelIndex = (name: { id: number; link: string }, index: number) => {
     const fild = CursorItems.link.findIndex((it) => it.link === name.link);

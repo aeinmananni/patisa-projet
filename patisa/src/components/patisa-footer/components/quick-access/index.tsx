@@ -5,20 +5,16 @@ import { LinkArrayType } from "../../../models";
 import { sortAndFilterLinks } from "../../../function/sorting";
 
 type Props = {
-  icons: string;
-  title: string;
+  children: React.ReactNode;
   linkArray: LinkArrayType[];
 };
 
-const QuickAccess = ({ icons, title, linkArray }: Props) => {
+const QuickAccess = ({ children, linkArray }: Props) => {
   const sortedLinks = sortAndFilterLinks(linkArray);
   return (
     <CustomDiv>
       <div className="flex flex-col items-center gap-4">
-        <div className="flex gap-1 text-sm">
-          <img src={icons} />
-          <span className="text-colorPrimary">{title}</span>
-        </div>
+        {children}
         <div className="text-sm flex flex-col items-start gap-2">
           {sortedLinks.map((items) => (
             <>
