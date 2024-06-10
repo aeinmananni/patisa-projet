@@ -43,13 +43,16 @@ const PatisaFooter = () => {
         <CustomDiv className="col-span-3 !border-none">
           <div className="flex flex-col h-full gap-4">
             <TextTempIcon icon={mapIcon} title={"پاتیسا در نقشه"} />
-            <div className=" h-52  overflow-hidden relative">
+            <a
+              href="https://www.google.com/maps/place/%D8%A8%D8%A7%D8%A8%D9%84%D8%8C+%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%D9%85%D8%A7%D8%B2%D9%86%D8%AF%D8%B1%D8%A7%D9%86%D8%8C+%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%E2%80%AD/@36.5287823,52.7178684,13.5z/data=!4m6!3m5!1s0x3f8f88494db70a07:0xf3a380da3076a39!8m2!3d36.5386629!4d52.6764543!16zL20vMDFiczU1?entry=ttu"
+              className=" h-52  overflow-hidden relative"
+            >
               <img
                 width={1000}
                 className="object-fill relative -translate-y-44"
                 src={mapImage}
               />
-            </div>
+            </a>
           </div>
         </CustomDiv>
       </div>
