@@ -1,7 +1,7 @@
 import ProductsCategorization from "./products-categorization";
 import RegisterIcon from "../icon/register-icon";
-import BasketIcons from "../icon/basket";
-import SerachIcon from "./icons/search-icon";
+import BasketComponent from "./basket-component";
+import SerachBox from "./search-box";
 
 const Navbar2 = () => {
   return (
@@ -9,13 +9,8 @@ const Navbar2 = () => {
       <div className="flex justify-between items-center  w-full ">
         <div className="flex  justify-center items-center gap-16  w-max ">
           <ProductsCategorization />
-          <div className="relative">
-            <SerachIcon />
-            <input
-              className="bg-blueLigth w-96 h-10 outline-none text-sm px-2 rounded-md"
-              placeholder="جست و جوی محصولات"
-            />
-          </div>
+
+          <SerachBox />
         </div>
 
         <div className="flex gap-5 justify-center items-center">
@@ -24,9 +19,7 @@ const Navbar2 = () => {
 
             <span className="text-colorPrimary2">ثبت نام</span>
           </button>
-          <div className="bg-orangeCustom flex justify-center items-center p-2  rounded-lg ml-3">
-            <BasketIcons />
-          </div>
+          <BasketComponent />
         </div>
       </div>
     </>

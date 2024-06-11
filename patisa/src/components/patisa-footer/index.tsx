@@ -44,7 +44,7 @@ const PatisaFooter = () => {
           <div className="flex flex-col h-full gap-4">
             <TextTempIcon icon={mapIcon} title={"پاتیسا در نقشه"} />
             <a
-              href="https://www.google.com/maps/place/%D8%A8%D8%A7%D8%A8%D9%84%D8%8C+%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%D9%85%D8%A7%D8%B2%D9%86%D8%AF%D8%B1%D8%A7%D9%86%D8%8C+%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%E2%80%AD/@36.5287823,52.7178684,13.5z/data=!4m6!3m5!1s0x3f8f88494db70a07:0xf3a380da3076a39!8m2!3d36.5386629!4d52.6764543!16zL20vMDFiczU1?entry=ttu"
+              href="https://www.google.com/maps/place/%D9%BE%D9%88%D8%B4%D8%A7%DA%A9+%D9%BE%D8%A7%D8%AA%DB%8C%D8%B3%D8%A7%E2%80%AD/@36.539636,52.6795205,18.67z/data=!4m6!3m5!1s0x3f8f89deaf123665:0x7d79fc2c8a957bf3!8m2!3d36.5395989!4d52.6789683!16s%2Fg%2F11ng56f08s?entry=ttu"
               className=" h-52  overflow-hidden relative"
             >
               <img

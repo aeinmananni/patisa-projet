@@ -1,25 +1,20 @@
-import { useRef, useState } from "react";
 import productSvg from "../../icon/product-icon.svg";
 import { SlArrowDown } from "react-icons/sl";
-import DropDown from "./drop-down";
-import { useClickAway } from "react-use";
 import { useStorePatisaManager } from "../../../../store/store-patisa";
-
+import DropDownCustomize from "./drop-down-customaiz";
 const ProductsCategorization = () => {
-  const { stateCategoryesWomenDropDown, stateCategoryMenDropDown } =
-    useStorePatisaManager();
-
-  const [focus, setFocus] = useState<boolean>(false);
-  const ref = useRef<HTMLDivElement>(null);
-  useClickAway(ref, () => {
-    setFocus(false);
-  });
+  const {
+    stateCategoryesWomenDropDown,
+    stateCategoryMenDropDown,
+    focus,
+    setFocus,
+  } = useStorePatisaManager();
 
   return (
     <>
       <div className="relative">
         <div
-          onClick={() => setFocus(!focus)}
+          onClick={() => setFocus((c) => !c)}
           className={`parentProductsCategorization group ${
             focus && "bg-colorPrimary"
           }`}
@@ -43,17 +38,10 @@ const ProductsCategorization = () => {
           />
         </div>
         {focus && (
-          <div
-            ref={ref}
-            className="flex flex-col justify-start items-start absolute py-5 right-7 z-20 bg-white"
-          >
-            <DropDown
-              gendercategories={stateCategoryesWomenDropDown}
-              isRounded
-              styles="px-2"
-            />
-            <DropDown gendercategories={stateCategoryMenDropDown} />
-          </div>
+          <DropDownCustomize
+            stateCategoryesWomenDropDown={stateCategoryesWomenDropDown}
+            stateCategoryMenDropDown={stateCategoryMenDropDown}
+          />
         )}
       </div>
     </>

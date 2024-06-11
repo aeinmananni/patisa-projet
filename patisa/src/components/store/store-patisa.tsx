@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { create } from "zustand";
 import { CategoryModalType } from "../models";
@@ -22,6 +23,8 @@ type PatisaStoreType = {
   stateCategoryesWomenBox: CategoryModalType[];
   stateCategoryMenBox: CategoryModalType[];
   stateLinkArray: LinkArrayType[];
+  focus: boolean;
+  setFocus: (focus: boolean | ((c: boolean) => boolean)) => void;
 };
 
 export const useStorePatisaManager = create<PatisaStoreType>()((set, get) => ({
@@ -92,4 +95,11 @@ export const useStorePatisaManager = create<PatisaStoreType>()((set, get) => ({
     { id: 5, path: "/rules", linkName: "قوانین" },
     { id: 6, path: "/contact-us", linkName: "ارتباط با ما" },
   ],
+  focus: false,
+
+  setFocus: (c: boolean | Function) => {
+    set(() => ({
+      focus: typeof c === "function" ? c(get().focus) : c,
+    }));
+  },
 }));

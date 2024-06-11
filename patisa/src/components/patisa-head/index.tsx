@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import PatisaMotto from "../Batisa's motto";
 import Navbar1 from "./components/navbar1";
 import Navbar2 from "./components/navbar2";
 
@@ -6,11 +7,7 @@ const PatisaHead = forwardRef<HTMLDivElement>(
   (_props, ref): React.ReactNode => {
     return (
       <div ref={ref} className="flex flex-col gap-6">
-        <div className="bg-redLigth w-full flex justify-center text-white h-10 items-center">
-          <span>
-            با عضویت در پاتیسا ، اولین سفارش خود را ” رایگان” تحویل بگیرید{" "}
-          </span>
-        </div>
+        <PatisaMotto />
         <div className="flex flex-col gap-6 w-full">
           <Navbar1 />
           <Navbar2 />
