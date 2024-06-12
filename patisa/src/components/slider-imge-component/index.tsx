@@ -57,7 +57,7 @@ const SliderImageComponent = () => {
             styles={{
               parentDiv: "bg-cartColorWoman",
               childDivImageAndText: "flex-row-reverse !w-full  px-2 ",
-              iconPatisaStyle: "bottom-0 p-2",
+              iconPatisaStyle: "bottom-4 p-2",
               imageStyle: " -mr-10",
               titleTextStyle: "!border-orangeCustom",
             }}

@@ -8,6 +8,10 @@ type Styles = {
   childDivImageAndText?: string;
   imageStyle?: string;
   titleTextStyle?: string;
+  textChildStyle1?: string;
+  textChildStyle2?: string;
+  buttonStyle?: string;
+  textButton?: string;
 };
 
 type Props = {
@@ -39,6 +43,12 @@ const Cart = ({
           titleTextStyle={styles?.titleTextStyle}
           titleText={titleText}
           textChild={textChild}
+          styles={{
+            textChildStyle1: styles?.textChildStyle1,
+            textChildStyle2: styles?.textChildStyle2,
+            buttonStyle: styles?.buttonStyle,
+            textButton: styles?.textButton,
+          }}
         />
         <img
           className={` ${

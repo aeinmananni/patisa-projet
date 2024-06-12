@@ -42,3 +42,14 @@ export type BestSellingCartType = {
 export type MantoType = Pick<BestSellingCartType,"id"|"title"|"image"> &{
   date:string
 }
+
+export type SliderItemsType ={
+      id:number
+      primaryId:string
+      imageUrl : string
+}
+
+export type LinksType = {
+     id:number
+     link:string
+}
