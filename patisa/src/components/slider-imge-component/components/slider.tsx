@@ -34,13 +34,13 @@ const Slider = ({
   return (
     <>
       <div className={`relative w-full  sm:h-[92%] ${style}`}>
-        <div className="carousel h-full  rounded-xl sm:rounded-r-xl ">
+        <div className="carousel h-full w-full rounded-xl sm:rounded-r-xl overflow-hidden">
           {CursorItems.items.map((it, index) => (
             <img
               key={index}
               id={it.primaryId}
               src={it.imageUrl}
-              className=" carousel-item sm:h-full w-full border-2 "
+              className=" carousel-item sm:h-full w-max xl:w-full border-2 "
             />
           ))}
         </div>

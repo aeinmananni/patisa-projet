@@ -24,7 +24,7 @@ const WindowsMode = () => {
 
   return (
     <>
-      <div className="h-screen overflow-y-auto  flex-col gap-9  px-12 hidden md:flex">
+      <div className="h-screen overflow-y-auto  flex-col gap-9  px-12 hidden xl:flex">
         <PatisaHead ref={divRef} />
         <SliderImageComponent />
         <PatisaServices />
