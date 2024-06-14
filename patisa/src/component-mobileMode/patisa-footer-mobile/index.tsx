@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import CustomDiv from "../../components/customaize-ul/custom-div-footer";
 import TextTempIcon from "../../components/customaize-ul/text-temp-icon";
 import Communication from "../../components/patisa-footer/components/communication";
