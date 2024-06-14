@@ -8,7 +8,7 @@ type Props = {
 const BestSellingHeaderCart = ({ imageHeadCart, titleHeaderCart }: Props) => {
   return (
     <>
-      <div className="flex justify-center items-center bg-blueLigth overflow-hidden  h-28 gap-2 w-max pl-4">
+      <div className="flex justify-center items-center bg-blueLigth overflow-hidden  h-28 gap-2 w-max pl-4 rounded-t-lg">
         <img className="w-36 h-36 -mr-5" src={imageHeadCart} />
         <div className="flex flex-col items-end gap-2">
           <span className="text-2xl">{titleHeaderCart}</span>

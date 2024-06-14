@@ -7,12 +7,13 @@ import { sortAndFilterLinks } from "../../../function/sorting";
 type Props = {
   children: React.ReactNode;
   linkArray: LinkArrayType[];
+  customDivClassName?: string;
 };
 
-const QuickAccess = ({ children, linkArray }: Props) => {
+const QuickAccess = ({ children, linkArray, customDivClassName }: Props) => {
   const sortedLinks = sortAndFilterLinks(linkArray);
   return (
-    <CustomDiv>
+    <CustomDiv className={customDivClassName}>
       <div className="flex flex-col items-center gap-4">
         {children}
         <div className="text-sm flex flex-col items-start gap-2">

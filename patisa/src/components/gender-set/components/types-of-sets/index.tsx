@@ -1,61 +1,63 @@
-import Circle1 from "../icons/circle.svg";
-import Circle2 from "../icons/circle2.svg";
-import MenImage from "../images/men-image2.png";
-import WomemImage from "../images/women-image2.png";
 import patisaIcon from "../../../slider-imge-component/components/icons/patisa-Icon.svg";
+
+type Styles = {
+  parentClassName?: string;
+  iconPatasiStyles?: string;
+  imagesStyels?: string;
+  textStyles?: string;
+  withParentRounded?: number;
+  circleStyelsHaveBackGroundColor?: string;
+  circleHaveBorderColro?: string;
+};
 type Props = {
   repalce?: boolean;
+  styles?: Styles;
+  withImage?: number;
+  text?: string;
+  CircleImages?: string;
+  humenImages?: string;
 };
 
-const TypesOfSets = ({ repalce }: Props) => {
+const TypesOfSets = ({
+  styles,
+  withImage,
+  text,
+  CircleImages,
+  humenImages,
+}: Props) => {
   return (
     <>
       <div
-        className={`w-full h-max flex justify-center items-center py-2 rounded-lg ${
-          repalce ? "bg-blueLigth" : "bg-red-50"
-        }`}
+        className={`w-full h-max flex justify-center items-center py-6 rounded-lg overflow-hidden ${styles?.parentClassName} `}
       >
-        <div className="relative ">
+        <div className="relative">
           <img
-            className={` w-12 absolute ${
-              repalce ? "-left-12 top-0" : "-right-12 top-0"
-            }`}
+            className={` w-12 absolute  ${styles?.iconPatasiStyles}`}
             src={patisaIcon}
           />
+
           <span
-            className={`${
-              repalce ? "text-colorPrimary right-0 " : "text-redLigth left-0 "
-            } text-4xl absolute top-[45%] `}
+            className={`text-4xl absolute top-[45%] ${styles?.textStyles} `}
           >
-            {repalce ? "ست مردانه" : "ست زنانه"}
+            {text}
           </span>
 
           <img
-            className={`absolute ${
-              repalce ? "left-0" : "right-0"
-            }  bottom-0 z-40`}
-            width={repalce ? 400 : 375}
-            src={repalce ? MenImage : WomemImage}
+            className={`absolute  bottom-0 z-40 ${styles?.imagesStyels}`}
+            width={withImage}
+            src={humenImages}
           />
 
           <div
-            className={` ${
-              repalce
-                ? "-bottom-16 -right-28 border-y-colorPrimary"
-                : "border-redLigth -bottom-24 -left-28"
-            }  border  w-[90%] h-[90%]  absolute rounded-full z-10`}
+            className={`  border  w-[90%] h-[90%]  absolute rounded-full z-10 ${styles?.circleHaveBorderColro}`}
           />
           <div
-            className={`w-12 h-12 rounded-full absolute  ${
-              repalce
-                ? "bg-DeressColor4 bottom-36 -right-3"
-                : "bg-redLigth -left-3 bottom-36"
-            }`}
+            className={`w-12 h-12 rounded-full absolute ${styles?.circleStyelsHaveBackGroundColor}`}
           />
           <img
             className="z-30 relative"
-            width={500}
-            src={repalce ? Circle2 : Circle1}
+            width={styles?.withParentRounded}
+            src={CircleImages}
           />
         </div>
       </div>

@@ -3,9 +3,16 @@ import { useEffect, useState } from "react";
 type Props = {
   title: string;
   description: string;
+  className?: string;
+  decriptionsClassName?: string;
 };
 
-const AdvertisingSloganBox = ({ title, description }: Props) => {
+const AdvertisingSloganBox = ({
+  title,
+  description,
+  className,
+  decriptionsClassName,
+}: Props) => {
   const [list, setList] = useState<string[]>([]);
 
   useEffect(() => {
@@ -15,7 +22,9 @@ const AdvertisingSloganBox = ({ title, description }: Props) => {
 
   return (
     <>
-      <div className="w-1/2 h-40 bg-colorDark absolute top-0 rounded-xl flex flex-col justify-center items-center gap-5">
+      <div
+        className={`w-1/2 h-40 bg-colorDark absolute top-0 rounded-xl flex flex-col justify-center items-center gap-5 ${className}`}
+      >
         <div className="flex ">
           {list.map((title, index) => (
             <>
@@ -29,7 +38,9 @@ const AdvertisingSloganBox = ({ title, description }: Props) => {
             </>
           ))}
         </div>
-        <p className="text-blueLigth">{description}</p>
+        <p className={` text-blueLigth  ${decriptionsClassName}`}>
+          {description}
+        </p>
       </div>
     </>
   );

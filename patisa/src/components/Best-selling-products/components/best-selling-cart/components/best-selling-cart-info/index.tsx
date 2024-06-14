@@ -16,7 +16,7 @@ const BestSellingCartInfo = ({ title, images, code, price, index }: Props) => {
       <div
         onMouseOver={() => setHoveredIndex(index ?? null)}
         onMouseOut={() => setHoveredIndex(null)}
-        className={`w-full flex justify-start gap-3 items-center border-b py-1 px-1 ${
+        className={`w-full flex justify-start gap-3 items-center  py-1 px-1 ${
           hoveredIndex === index && "shadow-lg"
         }`}
       >

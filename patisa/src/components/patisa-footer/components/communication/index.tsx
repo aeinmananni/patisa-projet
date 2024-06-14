@@ -5,11 +5,18 @@ type Props = {
   workingTimeText: string;
   phone: string;
   email: string;
+  customDivClassName?: string;
 };
 
-const Communication = ({ children, workingTimeText, phone, email }: Props) => {
+const Communication = ({
+  children,
+  workingTimeText,
+  phone,
+  email,
+  customDivClassName,
+}: Props) => {
   return (
-    <CustomDiv className="col-span-2 !border-none">
+    <CustomDiv className={`col-span-2 !border-none ${customDivClassName}`}>
       <div className="flex flex-col items-start gap-4 h-full">
         {children}
         <div className="text-sm flex flex-col items-start gap-4">

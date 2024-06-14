@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { create } from "zustand";
-import { CategoryModalType } from "../models";
 import CropIcon from "../patisa-head/components/navbar2/icons/crap-icon";
 import PantsIcon from "../patisa-head/components/navbar2/icons/pants-icon";
 import PartnerIcon from "../patisa-head/components/navbar2/icons/partner-icon";
@@ -15,7 +14,23 @@ import PantsMenIcon from "../patisa-head/components/navbar2/icons/pants-men-icon
 import ShortsMenIcon from "../patisa-head/components/navbar2/icons/shorts-men-icon";
 import TshirtMenIcon from "../patisa-head/components/navbar2/icons/t-shirt-men-icon";
 import UnderWearIcon from "../patisa-head/components/navbar2/icons/under-wear";
-import { LinkArrayType } from "../models";
+import priceIcon from "../patisa-services/components/icons/quality-guarantee.svg";
+import qualityGuarantee from "../patisa-services/components/icons/price-icon.svg";
+import fastPost from "../patisa-services/components/icons/fast-post-icon.svg";
+import OriginalityOfGoods from "../patisa-services/components/icons/originality-of-goods.svg";
+import afterPurchaseService from "../patisa-services/components/icons/after-Purchase-Service.svg";
+import PatisateModalImages from "../latest-products/components/images/latesProductImages.png";
+import TShirt from "../Best-selling-products/components/images/T-shirt.png";
+import Image1 from "../content-latest-of-patisa/components/images/latest-content.png";
+
+import {
+  LinkArrayType,
+  ServicesPatisaType,
+  CategoryModalType,
+  LatestProductsCartType,
+  BestSellingCartType,
+  MantoType,
+} from "../models";
 
 type PatisaStoreType = {
   stateCategoryesWomenDropDown: CategoryModalType[];
@@ -23,6 +38,10 @@ type PatisaStoreType = {
   stateCategoryesWomenBox: CategoryModalType[];
   stateCategoryMenBox: CategoryModalType[];
   stateLinkArray: LinkArrayType[];
+  statePatisaServises: ServicesPatisaType[];
+  productsCartInfo: LatestProductsCartType[];
+  BestSellingArray: BestSellingCartType[];
+  MantoArry: MantoType[];
   focus: boolean;
   setFocus: (focus: boolean | ((c: boolean) => boolean)) => void;
 };
@@ -94,6 +113,217 @@ export const useStorePatisaManager = create<PatisaStoreType>()((set, get) => ({
     { id: 4, path: "/weblog", linkName: "وبلاگ" },
     { id: 5, path: "/rules", linkName: "قوانین" },
     { id: 6, path: "/contact-us", linkName: "ارتباط با ما" },
+  ],
+  statePatisaServises: [
+    {
+      id: 1,
+      image: qualityGuarantee,
+      title: "تضمین بهترین قیمت",
+      description:
+        "با توجه به اینکه پاتیسا خود تولید کننده می باشد ، محصولات خود را با بهترین قیمت در اختیار شما میگذارد",
+    },
+    {
+      id: 2,
+      image: priceIcon,
+      title: "تضمین کیفیت",
+      description:
+        "تمامی کالاها اورجینال و با ضمانت اصل بودن از نمایندگی معتبر تهیه و ارائه می‌شوند.",
+    },
+    {
+      id: 3,
+      image: fastPost,
+      title: "ارسال سریع",
+      description:
+        "با توجه به اینکه پاتیسا خود تولید کننده می باشد ، محصولات خود را با بهترین قیمت در اختیار شما میگذارد",
+    },
+    {
+      id: 4,
+      image: OriginalityOfGoods,
+      title: "اصالت کالا",
+      description:
+        "تمامی کالا ها از برند پاتیسا و برند های معتبر تهیه و تولید شده هستند",
+    },
+    {
+      id: 5,
+      image: afterPurchaseService,
+      title: "خدمات پس از خرید",
+      description:
+        "هر گونه سوال و یا ابهامی قبل و یا پس از خرید ، میتوانید با پشتیباتی تماس حاصل فرمایید",
+    },
+  ],
+  productsCartInfo: [
+    {
+      id: 1,
+      imageAddres: PatisateModalImages,
+      dressTitle: "کت مازراتی",
+      code: "13128",
+      price: "2,090,000",
+      sizes: ["XL", "41", "44", "48"],
+      colors: ["#D62121", "#B3AD84", "#B79B89", "#16519F"],
+    },
+    {
+      id: 2,
+      imageAddres: PatisateModalImages,
+      dressTitle: "کت مازراتی",
+      code: "13128",
+      price: "2,090,000",
+      sizes: ["XL", "41", "44", "48"],
+      colors: ["#D62121", "#B3AD84", "#B79B89", "#16519F"],
+    },
+    {
+      id: 3,
+      imageAddres: PatisateModalImages,
+      dressTitle: "کت مازراتی",
+      code: "13128",
+      price: "2,090,000",
+      sizes: ["XL", "41", "44", "48"],
+      colors: ["#D62121", "#B3AD84", "#B79B89", "#16519F"],
+    },
+    {
+      id: 4,
+      imageAddres: PatisateModalImages,
+      dressTitle: "کت مازراتی",
+      code: "13128",
+      price: "2,090,000",
+      sizes: ["XL", "41", "44", "48"],
+      colors: ["#D62121", "#B3AD84", "#B79B89", "#16519F"],
+    },
+  ],
+  BestSellingArray: [
+    {
+      id: 1,
+      title: "کراپ زنانه و ورزشی",
+      image:
+        "https://s3-alpha-sig.figma.com/img/f496/f816/ee6395276ae0881910e7944605fff133?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KRPuKN2ej56-jXZXOEZSXBZ7xPs314Fbaty6Z3TqTvIIZzDdpzHEs1i7l~iBr1Ho-wrMKbSjDvhlb85v9UZyvMjEbli0HolAfZRjgbNGtQdJNEUM~pmU0e3iUYy5KqwMjsQ-sOJt7W8fEoGkyff67TQLkXPvo75kJ2q5DFKHywIL4TwPX4zhDFMwOLdtBfdF1WxHK8EPLJUB0bO-uwAjnPo8BNH5oSaI-NtAOrvFTnB7o81ONtcINrg8lsejMPYSlzcr7MphAq4iayubeQzQAF5xLV7iJne9FIr0jHjUOosesj9KUbV91rgyKOeaTfJDzRsYCAp7Fo7mXk2PoOrDMQ__",
+      CartInfo: [
+        {
+          id: 1,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+        {
+          id: 2,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+        {
+          id: 3,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+        {
+          id: 4,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: "کراپ زنانه و ورزشی",
+      image:
+        "https://s3-alpha-sig.figma.com/img/f496/f816/ee6395276ae0881910e7944605fff133?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KRPuKN2ej56-jXZXOEZSXBZ7xPs314Fbaty6Z3TqTvIIZzDdpzHEs1i7l~iBr1Ho-wrMKbSjDvhlb85v9UZyvMjEbli0HolAfZRjgbNGtQdJNEUM~pmU0e3iUYy5KqwMjsQ-sOJt7W8fEoGkyff67TQLkXPvo75kJ2q5DFKHywIL4TwPX4zhDFMwOLdtBfdF1WxHK8EPLJUB0bO-uwAjnPo8BNH5oSaI-NtAOrvFTnB7o81ONtcINrg8lsejMPYSlzcr7MphAq4iayubeQzQAF5xLV7iJne9FIr0jHjUOosesj9KUbV91rgyKOeaTfJDzRsYCAp7Fo7mXk2PoOrDMQ__",
+      CartInfo: [
+        {
+          id: 1,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+        {
+          id: 2,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+        {
+          id: 3,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+        {
+          id: 4,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: "کراپ زنانه و ورزشی",
+      image:
+        "https://s3-alpha-sig.figma.com/img/f496/f816/ee6395276ae0881910e7944605fff133?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KRPuKN2ej56-jXZXOEZSXBZ7xPs314Fbaty6Z3TqTvIIZzDdpzHEs1i7l~iBr1Ho-wrMKbSjDvhlb85v9UZyvMjEbli0HolAfZRjgbNGtQdJNEUM~pmU0e3iUYy5KqwMjsQ-sOJt7W8fEoGkyff67TQLkXPvo75kJ2q5DFKHywIL4TwPX4zhDFMwOLdtBfdF1WxHK8EPLJUB0bO-uwAjnPo8BNH5oSaI-NtAOrvFTnB7o81ONtcINrg8lsejMPYSlzcr7MphAq4iayubeQzQAF5xLV7iJne9FIr0jHjUOosesj9KUbV91rgyKOeaTfJDzRsYCAp7Fo7mXk2PoOrDMQ__",
+      CartInfo: [
+        {
+          id: 1,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+        {
+          id: 2,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+        {
+          id: 3,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+        {
+          id: 4,
+          dressTitle: "تیشرت کراپ کبریتی ",
+          code: "12354",
+          price: "۱۳۹,۹۰۰ ",
+          imageAddres: TShirt,
+        },
+      ],
+    },
+  ],
+  MantoArry: [
+    {
+      id: 1,
+      title: "مانتو تابستانه: مانتوهای مناسب برای فصل تابستان",
+      image: Image1,
+      date: "۲۳ اردیبهشت ۱۴۰۳",
+    },
+    {
+      id: 2,
+      title: "مانتو تابستانه: مانتوهای مناسب برای فصل تابستان",
+      image: Image1,
+      date: "۲۳ اردیبهشت ۱۴۰۳",
+    },
+    {
+      id: 3,
+      title: "مانتو تابستانه: مانتوهای مناسب برای فصل تابستان",
+      image: Image1,
+      date: "۲۳ اردیبهشت ۱۴۰۳",
+    },
+    {
+      id: 4,
+      title: "مانتو تابستانه: مانتوهای مناسب برای فصل تابستان",
+      image: Image1,
+      date: "۲۳ اردیبهشت ۱۴۰۳",
+    },
   ],
   focus: false,
 

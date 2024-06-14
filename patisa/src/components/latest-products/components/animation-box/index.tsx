@@ -23,7 +23,7 @@ const AnimatonBox = ({
   return (
     <>
       <div
-        className={`bg-cartColorWoman w-32 px-2 h-full flex flex-col justify-between rounded-lg overflow-hidden ${styles?.parentClassName}`}
+        className={`bg-cartColorWoman w-32  px-2 h-full flex flex-col justify-between rounded-lg overflow-hidden ${styles?.parentClassName}`}
       >
         <div className=" text-brownCustom flex-col flex justify-center items-center py-3 gap-3 text-4xl">
           <img src={patisaIcons} />
