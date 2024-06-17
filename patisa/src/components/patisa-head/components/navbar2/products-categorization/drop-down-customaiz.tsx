@@ -24,7 +24,7 @@ const DropDownCustomize = ({
     <>
       <div
         ref={ref}
-        className={`flex h-max flex-col justify-start items-start absolute rounded-lg right-7 z-20 bg-white ${parentClassName}`}
+        className={`flex h-max flex-col justify-start items-start absolute rounded-lg -right-3 z-20 bg-white ${parentClassName}`}
       >
         <DropDown
           gendercategories={stateCategoryesWomenDropDown}

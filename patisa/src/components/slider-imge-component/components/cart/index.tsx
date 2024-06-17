@@ -36,7 +36,7 @@ const Cart = ({
       className={`rounded-l-xl w-full  overflow-hidden ${styles?.parentDiv}`}
     >
       <div
-        className={`flex justify-between  relative h-full  ${styles?.childDivImageAndText}`}
+        className={`flex justify-between  items-center relative h-full  ${styles?.childDivImageAndText}`}
       >
         <CartInfoText
           onClick={onClick}

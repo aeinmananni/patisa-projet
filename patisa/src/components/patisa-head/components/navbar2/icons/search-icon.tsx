@@ -1,6 +1,6 @@
 const SerachIcon = () => {
   return (
-    <div className="absolute left-2 top-2">
+    <div className="absolute left-2 top-4 lg:top-2">
       <svg
         width="24"
         height="24"

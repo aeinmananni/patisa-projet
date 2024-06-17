@@ -7,12 +7,12 @@ const CategoryBox = () => {
     useStorePatisaManager();
   return (
     <>
-      <div className="relative flex flex-col py-20 mt-20 justify-center items-center">
+      <div className="relative  flex flex-col py-20 mt-20 justify-center items-center">
         <AdvertisingSloganBox
           title="با  پاتیســـا  مثل  فرشته ها شوید."
           description="طرح های بی نظیر با رنگ بندی متنوع، محصولاتی درجه یک و باکیفیت از برترین برندهای لباس"
         />
-        <div className="px-16 border w-full  bg-blueLigth rounded-xl py-24 ">
+        <div className="px-16 border w-full  bg-blueLigth rounded-xl pt-32 pb-12 ">
           <div className="flex flex-col gap-12">
             <CategoriesComponent
               titleGender="زنانه"

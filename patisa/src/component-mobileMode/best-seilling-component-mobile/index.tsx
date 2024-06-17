@@ -15,7 +15,7 @@ const BestSellingProductsMobile = () => {
             icon={bestSelingIcon}
             parentClassName="!justify-start text-white"
           />
-          <div className="grid grid-cols-1  gap-4 items-center   pb-12">
+          <div className="grid grid-cols-1  gap-4 items-center pb-12">
             {BestSellingArray.map((item) => (
               <BestSellingCart
                 key={item.id}

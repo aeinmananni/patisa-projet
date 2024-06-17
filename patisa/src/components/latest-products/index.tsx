@@ -10,8 +10,8 @@ const LatestProducts = () => {
   return (
     <>
       <div className="w-full bg-blueLigth  h-80 flex flex-col  py-12 rounded-xl ">
-        <div className="flex flex-col gap-4">
-          <div className="flex justify-center xl:justify-between px-2 gap-7 items-start px-2">
+        <div className="flex flex-col gap-8">
+          <div className="flex justify-center xl:justify-between  gap-7 items-start px-16">
             <DeclaerTitleAndIconCompo
               title="جدید ترین محصولات"
               icon={latestIcons}

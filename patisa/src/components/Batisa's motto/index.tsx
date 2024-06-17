@@ -4,7 +4,7 @@ type Props = {
 const PatisaMotto = ({ textStyle }: Props) => {
   return (
     <>
-      <div className="bg-redLigth w-full flex justify-center text-white h-10 items-center">
+      <div className="bg-redLigth w-full flex text-sm md:text-lg  justify-center text-white h-10 items-center">
         <span className={textStyle}>
           با عضویت در پاتیسا ، اولین سفارش خود را ” رایگان” تحویل بگیرید{" "}
         </span>

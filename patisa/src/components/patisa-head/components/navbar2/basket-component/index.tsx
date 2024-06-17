@@ -8,7 +8,7 @@ const BasketComponent = ({ className }: Props) => {
   return (
     <>
       <div
-        className={`bg-orangeCustom flex justify-center items-center p-2  rounded-lg ml-3 ${className}`}
+        className={`bg-orangeCustom flex justify-center items-center p-4 lg:p-2  rounded-lg lg:ml-3 ${className}`}
       >
         <BasketIcons />
       </div>

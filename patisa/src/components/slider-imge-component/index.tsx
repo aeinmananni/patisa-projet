@@ -32,18 +32,26 @@ const SliderImageComponent = () => {
   ];
   return (
     <>
-      <div className="flex w-full justify-center gap-4  items-center px-4">
+      <div className=" grid grid-cols-1 xl:flex w-full justify-center gap-4  items-center  border">
         <Slider
           CursorItems={{
             items: ImageItesm,
             link: LinkItems,
           }}
         />
-        <div className="flex flex-col gap-2 w-1/2">
+        <div className="flex xl:flex-col flex-row-reverse gap-2  w-full xl:w-1/2">
           <Cart
             styles={{
-              parentDiv: "bg-colorDark",
-              iconPatisaStyle: "top-0 left-0 p-2",
+              parentDiv: "bg-colorDark !h-max",
+              iconPatisaStyle:
+                "top-1 left-1 md:left-0 md:top-0 sm:p-2 !w-4 sm:!w-10 md:!w-12",
+              titleTextStyle: "!text-sm sm:!text-lg !w-max lg:!text-2xl",
+              textChildStyle1: "!text-xs !w-max sm:!text-lg lg:!text-xl",
+              textChildStyle2: "!text-xs sm:text-lg",
+              imageStyle: "!w-20 !h-36  sm:!h-full  sm:!w-44 ",
+              buttonStyle: "!w-max scale-75 sm:scale-100",
+              textButton: "!text-sm",
+              childDivImageAndText: "!items-center",
             }}
             imageCart={menImage}
             titleText={"به وقت خوشتیپی!"}
@@ -56,10 +64,14 @@ const SliderImageComponent = () => {
             widthImage="w-52"
             styles={{
               parentDiv: "bg-cartColorWoman",
-              childDivImageAndText: "flex-row-reverse !w-full  px-2 ",
-              iconPatisaStyle: "bottom-4 p-2",
-              imageStyle: " -mr-10",
-              titleTextStyle: "!border-orangeCustom",
+              childDivImageAndText: "flex-row-reverse !w-full  px-6 ",
+              iconPatisaStyle:
+                "bottom-1 left-1 md:left-0 md:bottom-0 sm:p-2 !w-4 sm:!w-10 md:!w-12",
+              imageStyle: " md:-mr-10 !w-20 !h-36  sm:!h-full  sm:!w-44 ",
+              titleTextStyle:
+                " !border-orangeCustom !text-sm sm:!text-lg !w-max lg:!text-2xl",
+              textChildStyle1: "!text-xs !w-max sm:!text-lg lg:!text-xl",
+              textChildStyle2: "!text-xs sm:text-lg !w-max",
             }}
           />
         </div>
