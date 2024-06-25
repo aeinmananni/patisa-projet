@@ -8,7 +8,7 @@ type Props = {
 const MainPatisaServices = ({ services }: Props) => {
   return (
     <>
-      <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 md:justify-between xl:flex xl:justify-between  items-center  px-3">
+      <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4  lg:justify-between xl:flex xl:justify-between  items-center  px-3">
         {services.map((service, index) => (
           <div
             key={index}

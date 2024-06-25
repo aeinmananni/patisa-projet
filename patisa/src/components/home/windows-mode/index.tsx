@@ -1,6 +1,6 @@
 import PatisaMotto from "../../Batisa's motto";
 // import BestSellingProducts from "../../Best-selling-products";
-// import CategoryBox from "../../category-box";
+import CategoryBox from "../../category-box";
 // import ContentLatestOfPatisa from "../../content-latest-of-patisa";
 // import GenderSets from "../../gender-set";
 // import LatestProducts from "../../latest-products";
@@ -31,9 +31,9 @@ const WindowsMode = () => {
         <PatisaHead ref={divRef} />
         <SliderImageComponent />
         <PatisaServices />
-        {/* <CategoryBox />
+        <CategoryBox />
 
-        <div className="grid grid-cols-1 gap-64 w-full h-max  ">
+        {/* <div className="grid grid-cols-1 gap-64 w-full h-max  ">
           <LatestProducts />
           <BestSellingProducts />
           <GenderSets />
