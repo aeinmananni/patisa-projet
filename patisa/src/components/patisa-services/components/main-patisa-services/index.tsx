@@ -8,11 +8,13 @@ type Props = {
 const MainPatisaServices = ({ services }: Props) => {
   return (
     <>
-      <div className="grid grid-cols-2 xl:flex xl:justify-between  items-center  px-3">
+      <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 md:justify-between xl:flex xl:justify-between  items-center  px-3">
         {services.map((service, index) => (
           <div
             key={index}
-            className={`${index === 4 && "col-span-2 flex justify-center "}`}
+            className={`${
+              index === 4 && "col-span-2 sm:col-span-1 flex justify-center "
+            }`}
           >
             <div className="group">
               <RoundedDiv className="group-hover:from-orangeCustom">

@@ -67,7 +67,8 @@ const SliderImageComponent = () => {
               childDivImageAndText: "flex-row-reverse !w-full  px-6 ",
               iconPatisaStyle:
                 "bottom-1 left-1 md:left-0 md:bottom-0 sm:p-2 !w-4 sm:!w-10 md:!w-12",
-              imageStyle: " md:-mr-10 !w-20 !h-36  sm:!h-full  sm:!w-44 ",
+              imageStyle:
+                "!-ml-3 md:-mr-10 !w-20 !h-36  sm:!h-full  sm:!w-44  ",
               titleTextStyle:
                 " !border-orangeCustom !text-sm sm:!text-lg !w-max lg:!text-2xl",
               textChildStyle1: "!text-xs !w-max sm:!text-lg lg:!text-xl",

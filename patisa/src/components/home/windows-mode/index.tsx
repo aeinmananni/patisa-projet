@@ -6,7 +6,7 @@ import PatisaMotto from "../../Batisa's motto";
 // import LatestProducts from "../../latest-products";
 // import PatisaFooter from "../../patisa-footer";
 import PatisaHead from "../../patisa-head";
-// import PatisaServices from "../../patisa-services";
+import PatisaServices from "../../patisa-services";
 // import SliderImageComponent from "../../slider-imge-component";
 // import flash from "../icons/flash.svg";
 import { useRef } from "react";
@@ -30,8 +30,8 @@ const WindowsMode = () => {
       <div className="flex-col gap-9 px-5 md:px-12 flex">
         <PatisaHead ref={divRef} />
         <SliderImageComponent />
-        {/* <PatisaServices />
-        <CategoryBox />
+        <PatisaServices />
+        {/* <CategoryBox />
 
         <div className="grid grid-cols-1 gap-64 w-full h-max  ">
           <LatestProducts />

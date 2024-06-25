@@ -7,7 +7,7 @@ const PatisaServices = () => {
   const { statePatisaServises } = useStorePatisaManager();
   return (
     <>
-      <div className="flex flex-col  gap-12 ">
+      <div className="flex flex-col gap-12 ">
         <HeadPatisaBorders>
           <TextHeadPatisa titleOverBorder="خدمات" text="پاتیسا" />
         </HeadPatisaBorders>
