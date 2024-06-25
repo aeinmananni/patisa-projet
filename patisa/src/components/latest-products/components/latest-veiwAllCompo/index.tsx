@@ -4,9 +4,9 @@ const LatestViewAllCompo = () => {
   return (
     <>
       <div>
-        <div className="flex justify-center items-center gap-3">
-          <CustomButton ArrowRight />
-          <h1>مشاهده همه</h1>
+        <div className="flex justify-center items-center gap-3 w-max">
+          <CustomButton ArrowRight styles="" />
+          <h1 className="text-sm lg:text-lg">مشاهده همه</h1>
           <CustomButton styles="!bg-colorPrimary" />
         </div>
       </div>

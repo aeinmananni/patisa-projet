@@ -4,21 +4,33 @@ import LatestViewAllCompo from "./components/latest-veiwAllCompo";
 import AnimatonBox from "./components/animation-box";
 import LatestProductCarts from "./components/latest-product-carts";
 import { useStorePatisaManager } from "../store/store-patisa";
+import { useWindowSize } from "react-use";
 
 const LatestProducts = () => {
   const { productsCartInfo } = useStorePatisaManager();
+  const { width } = useWindowSize();
+  const getVisibleItems = () => {
+    if (width < 500) {
+      return productsCartInfo.slice(0, 1);
+    } else if (width < 968) {
+      return productsCartInfo.slice(0, 2);
+    } else {
+      return productsCartInfo;
+    }
+  };
+  console.log("Wiith", width);
   return (
     <>
       <div className="w-full bg-blueLigth  h-80 flex flex-col  py-12 rounded-xl ">
         <div className="flex flex-col gap-8">
-          <div className="flex justify-center xl:justify-between  gap-7 items-start px-16">
+          <div className="flex justify-between items-center px-2 lg:px-24 ">
             <DeclaerTitleAndIconCompo
               title="جدید ترین محصولات"
               icon={latestIcons}
             />
             <LatestViewAllCompo />
           </div>
-          <div className="flex h-max w-full  justify-center gap-4 px-2">
+          <div className="flex h-80 w-full  justify-center gap-4 px-2 ">
             <AnimatonBox
               title="NEW"
               imageAbsolutePosition="https://s3-alpha-sig.figma.com/img/9f49/68a1/2725d6f06435626a3a2e86ad901fb166?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EFuwNwsbf0nvxVqjXX2r3dfyCKdx7H6iYMKDg0VRM5YCzDk0IxzyGohED6lq4kBfTbARuyCzAUo6327DcdYyzS6qIllrQj7U8pkT9q53mdhug6JaQrdp9yZ5-YZU~JLj8Yx8cj4jGOxUC9CXsPE5JuVfCTZS5lYh2Kp0skgpbRwtarY1fDWhcuHObdJXqkzNkdUYpH6Db54AVZvHJZnozqMNGbpGIVso-QjlCWOLzUER6plVOBHuWKlVJ9vrrCdel9AAZSKysC6-1rQzJoEJa0OzF4SXCiZ6KFU-yiSjOmxr4oc1GXpgllYp2z5pxExsUF7JyFwueRfYWIse3bB8xw__"
@@ -28,7 +40,8 @@ const LatestProducts = () => {
                 shadowTitle: "-left-3",
               }}
             />
-            {productsCartInfo.map((item, index) => (
+
+            {getVisibleItems().map((item, index) => (
               <>
                 <LatestProductCarts
                   key={index}

@@ -3,7 +3,7 @@ import PatisaMotto from "../../Batisa's motto";
 import CategoryBox from "../../category-box";
 // import ContentLatestOfPatisa from "../../content-latest-of-patisa";
 // import GenderSets from "../../gender-set";
-// import LatestProducts from "../../latest-products";
+import LatestProducts from "../../latest-products";
 // import PatisaFooter from "../../patisa-footer";
 import PatisaHead from "../../patisa-head";
 import PatisaServices from "../../patisa-services";
@@ -33,12 +33,12 @@ const WindowsMode = () => {
         <PatisaServices />
         <CategoryBox />
 
-        {/* <div className="grid grid-cols-1 gap-64 w-full h-max  ">
+        <div className="grid grid-cols-1 gap-64 w-full h-max  pb-44">
           <LatestProducts />
-          <BestSellingProducts />
-          <GenderSets />
+          {/* <BestSellingProducts />
+          <GenderSets /> */}
         </div>
-        <ContentLatestOfPatisa />
+        {/* <ContentLatestOfPatisa />
         <div className="  w-full  h-max  items-center flex flex-col mt-32 gap-6">
           <div
             onClick={scrollToTop}

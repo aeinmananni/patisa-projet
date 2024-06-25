@@ -8,10 +8,10 @@ const DeclaerTitleAndIconCompo = ({ icon, title, parentClassName }: Props) => {
   return (
     <>
       <div
-        className={`flex justify-center items-center gap-2  ${parentClassName}`}
+        className={`flex  max-w  justify-center items-center gap-2   ${parentClassName}`}
       >
         <img src={icon} />
-        <h1>{title}</h1>
+        <h1 className="text-sm lg:text-lg">{title}</h1>
       </div>
     </>
   );
