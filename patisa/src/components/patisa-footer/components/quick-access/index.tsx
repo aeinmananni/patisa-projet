@@ -14,9 +14,9 @@ const QuickAccess = ({ children, linkArray, customDivClassName }: Props) => {
   const sortedLinks = sortAndFilterLinks(linkArray);
   return (
     <CustomDiv className={customDivClassName}>
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-start md:items-center  gap-4 w-full ">
         {children}
-        <div className="text-sm flex flex-col items-start gap-2">
+        <div className="text-sm flex flex-col justify-end items-start gap-2">
           {sortedLinks.map((items) => (
             <>
               <Link key={items.id} to={items.path}>

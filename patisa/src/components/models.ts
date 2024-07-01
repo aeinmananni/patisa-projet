@@ -54,3 +54,7 @@ export type LinksType = {
      link:string
 }
 
+
+export type WidthHandelType<T> = {
+      products:T[]
+}

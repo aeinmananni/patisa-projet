@@ -8,12 +8,12 @@ type Props = {
 
 const E_CommerceSymbol = ({ children, parvanehImage, symbolImage }: Props) => {
   return (
-    <CustomDiv className="col-span-2 ">
-      <div className="flex flex-col gap-4 h-full">
+    <CustomDiv className="lg:col-span-2 ">
+      <div className="flex flex-col gap-4 h-full w-full  md:mt-0 border">
         {children}
-        <div className="flex gap-5">
-          <img width={250} src={parvanehImage} />
-          <img className="w-36 h-36" src={symbolImage} />
+        <div className="flex md:gap-5 w-full">
+          <img className="w-48 h-32" src={parvanehImage} />
+          <img className="lg:w-36 lg:h-36" src={symbolImage} />
         </div>
       </div>
     </CustomDiv>

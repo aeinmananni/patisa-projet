@@ -49,7 +49,7 @@ const SliderImageComponent = () => {
                 "top-1 left-1 md:left-0 md:top-0 sm:p-2 !w-4 sm:!w-10 md:!w-12",
               titleTextStyle: "!text-sm sm:!text-lg !w-max lg:!text-2xl",
               textChildStyle1: "!text-xs !w-max sm:!text-lg lg:!text-xl",
-              textChildStyle2: "!text-xs sm:text-lg",
+              textChildStyle2: "!text-xs sm:!text-lg",
               imageStyle: ` ${
                 width < 400 ? "!hidden" : "flex"
               } !w-20 !h-36  sm:!h-full  sm:!w-44 `,
@@ -67,7 +67,7 @@ const SliderImageComponent = () => {
             textChild="خرید انواع لباس زنانه"
             widthImage="w-52"
             styles={{
-              parentDiv: "bg-cartColorWoman",
+              parentDiv: "bg-cartColorWoman !h-max",
               childDivImageAndText: "flex-row-reverse !w-full  px-6 ",
               iconPatisaStyle:
                 "bottom-1 left-1 md:left-0 md:bottom-0 sm:p-2 !w-4 sm:!w-10 md:!w-12",
@@ -77,8 +77,8 @@ const SliderImageComponent = () => {
               titleTextStyle:
                 " !border-orangeCustom !text-sm sm:!text-lg !w-max lg:!text-2xl",
               textChildStyle1: "!text-xs !w-max sm:!text-lg lg:!text-xl",
-              textChildStyle2: "!text-xs sm:text-lg !w-max",
-              buttonStyle: "!w-max scale-75 sm:scale-100",
+              textChildStyle2: "!text-xs sm:!text-lg !w-max",
+              buttonStyle: "!w-max scale-75 sm:scale-100 mb-2",
             }}
           />
         </div>

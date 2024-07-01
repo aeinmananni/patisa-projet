@@ -11,7 +11,7 @@ const GenderSetMobile = () => {
           repalce
           styles={{
             imagesStyels: "left-0",
-            iconPatasiStyles: "!-left-3",
+            iconPatasiStyles: "!left-3",
             textStyles: "text-colorPrimary right-4 !text-3xl",
             withParentRounded: 400,
             parentClassName: "py-14 bg-blueLigth",
@@ -27,7 +27,7 @@ const GenderSetMobile = () => {
         <TypesOfSets
           repalce
           styles={{
-            iconPatasiStyles: "!-left-3",
+            iconPatasiStyles: "!left-3",
             textStyles: "text-redLigth left-0 !text-3xl",
             withParentRounded: 400,
             parentClassName: "py-14 bg-red-50",

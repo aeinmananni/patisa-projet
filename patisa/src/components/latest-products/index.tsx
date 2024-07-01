@@ -5,25 +5,19 @@ import AnimatonBox from "./components/animation-box";
 import LatestProductCarts from "./components/latest-product-carts";
 import { useStorePatisaManager } from "../store/store-patisa";
 import { useWindowSize } from "react-use";
+import { getVisibleItems } from "../function/with-handler";
+import { LatestProductsCartType } from "../models";
 
 const LatestProducts = () => {
   const { productsCartInfo } = useStorePatisaManager();
   const { width } = useWindowSize();
-  const getVisibleItems = () => {
-    if (width < 500) {
-      return productsCartInfo.slice(0, 1);
-    } else if (width < 968) {
-      return productsCartInfo.slice(0, 2);
-    } else {
-      return productsCartInfo;
-    }
-  };
+
   console.log("Wiith", width);
   return (
     <>
       <div className="w-full bg-blueLigth  h-80 flex flex-col  py-12 rounded-xl ">
         <div className="flex flex-col gap-8">
-          <div className="flex justify-between items-center px-2 lg:px-24 ">
+          <div className="flex justify-between items-center px-2 lg:px-20 ">
             <DeclaerTitleAndIconCompo
               title="جدید ترین محصولات"
               icon={latestIcons}
@@ -41,19 +35,21 @@ const LatestProducts = () => {
               }}
             />
 
-            {getVisibleItems().map((item, index) => (
-              <>
-                <LatestProductCarts
-                  key={index}
-                  colors={item.colors}
-                  imageAddres={item.imageAddres}
-                  dressTitle={item.dressTitle}
-                  code={item.code}
-                  price={item.code}
-                  sizes={item.sizes}
-                />
-              </>
-            ))}
+            {getVisibleItems({ products: productsCartInfo }).map(
+              (item: LatestProductsCartType, index: number) => (
+                <>
+                  <LatestProductCarts
+                    key={index}
+                    colors={item.colors}
+                    imageAddres={item.imageAddres}
+                    dressTitle={item.dressTitle}
+                    code={item.code}
+                    price={item.code}
+                    sizes={item.sizes}
+                  />
+                </>
+              )
+            )}
           </div>
         </div>
       </div>

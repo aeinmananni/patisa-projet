@@ -19,7 +19,7 @@ const PatisaFooter = () => {
   const { stateLinkArray } = useStorePatisaManager();
   return (
     <>
-      <div className="w-full h-max bg-blueLigth grid grid-cols-5 gap-y-14 py-6 rounded-xl px-12">
+      <div className="w-full h-max bg-blueLigth justify-center items-center grid-cols-1 sm:grid-cols-2 grid  lg:grid-cols-5 gap-y-14 py-6 rounded-xl px-2 lg:px-12">
         <Description
           image={patisaIcon}
           title={`پاتیسا تولید کننده انواع لباس راحتی زنانه و دخترانه با بیش از 10
@@ -40,7 +40,7 @@ const PatisaFooter = () => {
         <E_CommerceSymbol parvanehImage={Parvaneh} symbolImage={namad}>
           <TextTempIcon title="نماد تجارت الکترونیک" icon={Symbol} />
         </E_CommerceSymbol>
-        <CustomDiv className="col-span-3 !border-none">
+        <CustomDiv className="lg:col-span-3 !border-none">
           <div className="flex flex-col h-full gap-4">
             <TextTempIcon icon={mapIcon} title={"پاتیسا در نقشه"} />
             <a
@@ -48,7 +48,6 @@ const PatisaFooter = () => {
               className=" h-52  overflow-hidden relative"
             >
               <img
-                width={1000}
                 className="object-fill relative -translate-y-44"
                 src={mapImage}
               />
