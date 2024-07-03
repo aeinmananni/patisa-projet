@@ -3,6 +3,7 @@ import Slider from "./components/slider";
 import menImage from "./components/image/men-image.png";
 import womenImage from "./components/image/woman-image.png";
 import testImage from "./components/image/hhh.jpg";
+import patisaImage from "./components/image/tablo.jpg";
 import { useWindowSize } from "react-use";
 
 const SliderImageComponent = () => {
@@ -10,8 +11,7 @@ const SliderImageComponent = () => {
     {
       id: 1,
       primaryId: "image1",
-      imageUrl:
-        "https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg",
+      imageUrl: patisaImage,
     },
     {
       id: 2,

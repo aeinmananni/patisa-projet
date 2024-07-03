@@ -6,6 +6,7 @@ import Input from "./input";
 import { useStorePatisaManager } from "../../store/store-patisa";
 import LatestProductCarts from "../../latest-products/components/latest-product-carts";
 import flashPagination from "./icons/flash-pagination.svg";
+import filterIcon from "./icons/filter.svg";
 
 const Layoue = () => {
   const { productsCartInfoSales } = useStorePatisaManager();
@@ -101,18 +102,32 @@ const Layoue = () => {
       );
     }
   };
-
+  const [state, setstate] = useState<boolean>(false);
   return (
     <>
       <div className="h-full w-full flex flex-col overflow-hidden">
         <SalesHead />
-        <div className="w-full h-full overflow-x-hidden px-4  overflow-y-auto flex flex-col gap-4 py-12">
-          <div className="flex w-full gap-2">
+        <div className="w-full h-full overflow-x-hidden   overflow-y-auto flex flex-col gap-4 ">
+          <div className="">
+            <button
+              onClick={() => setstate(!state)}
+              className="bg-blueLigth flex sm:hidden  flex-row-reverse gap-3 justify-center items-center px-4 py-3 rounded-lg border"
+            >
+              <span className="text-colorPrimary">فیلتر</span>
+
+              <img src={filterIcon} />
+            </button>
+          </div>
+          <div
+            className={`w-full ${
+              state ? "grid grid-cols-1 gap-2" : "hidden"
+            } sm:grid sm:grid-cols-1 lg:grid-cols-3  gap-2`}
+          >
             <Input label="دسته بندی" />
             <Input label="مرتب سازی بر اساس" />
             <Input label="انتخاب بازه ی قیمت" />
           </div>
-          <div className="grid grid-cols-5 gap-12 ">
+          <div className="grid grid-cols-2 justify-center items-center sm:grid-cols-3 md:grid-cols-4  gap-4 xl:gap-12">
             {currentItems.map((item, index) => (
               <LatestProductCarts
                 key={index}
@@ -126,7 +141,7 @@ const Layoue = () => {
               />
             ))}
           </div>
-          <div className="flex justify-between mt-4">
+          <div className=" hidden justify-between mt-4 xl:flex">
             <button
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
