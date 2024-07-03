@@ -16,9 +16,9 @@ const GenderSets = () => {
             iconPatasiStyles: "!left-3 sm:!-left-16 lg:!-left-10",
             withParentRounded: 500,
             parentClassName: "bg-blueLigth",
-            circleStyelsHaveBackGroundColor: `bg-DeressColor4 bottom-28 sm:bottom-36  -right-3   xl:-right-3 !h-7 !w-7 sm:!w-12 sm:!h-12  `,
+            circleStyelsHaveBackGroundColor: `bg-DeressColor4 right-0 bottom-28 sm:bottom-36  sm:-right-3   xl:-right-3 !h-7 !w-7 sm:!w-12 sm:!h-12  `,
             circleHaveBorderColro: "-bottom-16 -right-28 border-y-colorPrimary",
-            imagesStyels: "left-0 !w-72 -bottom-6 sm:!w-96 ",
+            imagesStyels: "left-0 !w-72 -bottom-6 sm:!w-[26rem] ",
           }}
           humenImages={men}
           CircleImages={Circle2}

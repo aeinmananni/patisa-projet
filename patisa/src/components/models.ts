@@ -30,6 +30,11 @@ export type LatestProductsCartType = {
      colors:string[]
 }
 
+
+ export type LatestProducCartSalseType = LatestProductsCartType & {
+      off:string
+ }
+
 export type BestCartInfoType = Pick<LatestProductsCartType , "id" | "dressTitle"|"price"|"code"|"imageAddres">
 
 export type BestSellingCartType = {

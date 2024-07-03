@@ -17,7 +17,9 @@ const DeclaerTitleAndIconCompo = ({
         className={`flex  max-w  justify-center items-center gap-2   ${parentClassName}`}
       >
         <img src={icon} />
-        <h1 className={`text-sm xl:text- lg:text-lg ${textStyles}`}>{title}</h1>
+        <h1 className={`text-sm xl:text- lg:text-lg  ${textStyles}`}>
+          {title}
+        </h1>
       </div>
     </>
   );

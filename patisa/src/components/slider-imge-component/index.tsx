@@ -2,6 +2,7 @@ import Cart from "./components/cart";
 import Slider from "./components/slider";
 import menImage from "./components/image/men-image.png";
 import womenImage from "./components/image/woman-image.png";
+import testImage from "./components/image/hhh.jpg";
 import { useWindowSize } from "react-use";
 
 const SliderImageComponent = () => {
@@ -21,8 +22,7 @@ const SliderImageComponent = () => {
     {
       id: 3,
       primaryId: "image3",
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+      imageUrl: testImage,
     },
   ];
 
